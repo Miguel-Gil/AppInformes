@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.ieslosmontecillos.appinformes.AppInformesController">
+   <children>
+      <MenuBar fx:id="menuBar" prefHeight="27.0" prefWidth="600.0">
+        <menus>
+          <Menu fx:id="informes" mnemonicParsing="false" text="Informes">
+            <items>
+              <MenuItem fx:id="listadoFacturas" mnemonicParsing="false" onAction="#loadListadoFacturas" text="Listado Facturas" />
+                  <MenuItem fx:id="ventasTotales" mnemonicParsing="false" onAction="#loadVentasTotales" text="Ventas Totales" />
+                  <MenuItem fx:id="facturasPorCliente" mnemonicParsing="false" onAction="#loadFacturasPorCliente" text="Facturas por Cliente" />
+                  <MenuItem fx:id="subinforme" mnemonicParsing="false" onAction="#loadSubinformes" text="Subinforme Listado Facturas" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Salir">
+               <items>
+                  <MenuItem fx:id="salir" mnemonicParsing="false" onAction="#Close" text="Salir" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="btnIntroducir" layoutX="170.0" layoutY="65.0" mnemonicParsing="false" text="Introducir ID Cliente" />
+      <TextField fx:id="TfIntroducir" layoutX="21.0" layoutY="65.0" />
+      <Text fx:id="TxItroducir" layoutX="21.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Introducir ID Cliente" wrappingWidth="149.0" />
+   </children>
+</AnchorPane>
